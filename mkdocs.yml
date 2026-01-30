@@ -2,7 +2,7 @@ site_name: WustACM'Docs
 repo_url: https://github.com/WUSTACM/MkDocs
 repo_name: WUSTACM/MkDocs   
 
-site_url: https://sitename.example
+site_url: https://docs.wustacm.org/
 theme:
   name: material
   language: zh
