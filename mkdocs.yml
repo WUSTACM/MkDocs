@@ -155,6 +155,3 @@ plugins:
   - search
   - tags
   - projects
-  
-extra_files:
-  - CNAME

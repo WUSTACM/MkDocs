@@ -26,4 +26,6 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material
+      - run: mkdocs build
+      - run: echo "docs.wustacm.org" > site/CNAME
       - run: mkdocs gh-deploy --force
