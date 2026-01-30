@@ -156,4 +156,5 @@ plugins:
   - tags
   - projects
   
-
+extra_files:
+  - CNAME
