@@ -1,17 +1,24 @@
 site_name: WustACM'Docs
+repo_url: https://github.com/WUSTACM/MkDocs
+repo_name: WUSTACM/MkDocs   
+
 site_url: https://sitename.example
 theme:
   name: material
   language: zh
   logo: assets/2025-12-21-3.png
   favicon: assets/2025-12-21-3.png
+  custom_dir: overrides
+  icon:
+    tag:
+      题解: #simple-academia
   palette:
     # Dark Mode
     - scheme: slate
       toggle:
         icon: material/weather-sunny
         name: Dark mode
-      primary: green
+      primary: teal
       accent: deep purple
 
     # Light Mode
@@ -25,10 +32,35 @@ theme:
     text: Merriweather Sans
     code: Red Hat Mono
   features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
     - navigation.footer
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.prune
+    - navigation.indexes
+    - toc.follow
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - header.autohide
   
 
 markdown_extensions:
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.smartsymbols
+  - pymdownx.blocks.caption
+  - pymdownx.arithmatex:
+      generic: true
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
@@ -51,4 +83,77 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
 
 
-copyright: Copyright &copy; 2026 WUSTACM
+
+
+extra:
+  consent:
+    title: Cookie consent
+    description: >- 
+      我们使用 cookies 来识别您的重复访问和偏好，以及其他信息
+      以评估我们的文档的有效性以及用户是否
+      找到他们正在寻找的东西。在你同意的情况下，你正在帮助我们实现目标。
+      让我们的文档更好。
+    cookies:
+      analytics: Custom name
+    actions:
+      - accept
+      - manage 
+  analytics:
+    provider: google
+    property: G-8JQ8PJF435 
+    feedback:
+      title: 这个页面对你有帮助吗？
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: 有帮助
+          data: 1
+          note: >-
+            感谢你的反馈！
+        - icon: material/emoticon-sad-outline
+          name: 需要改进
+          data: 0
+          note: >-
+            感谢你的反馈！欢迎通过
+            <a href="..." target="_blank" rel="noopener">反馈表单</a>
+            告诉我们哪里可以做得更好。
+  generator: false
+  repo:
+    facts:
+      - version
+      - stars
+      - forks
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/WUSTACM/
+  tags:
+    <tag>: 题解
+
+
+copyright: >
+  Copyright &copy; 2026 WUSTACM –
+  <a href="#__consent">Change cookie settings</a>
+
+extra_javascript:
+  - javascripts/consent.js
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: index.md
+  - wiki: 
+      - wiki/index.md
+  - 题解:
+      - solutions/index.md
+      - Codeforces Round 1077 (Div. 2): solutions/1077div2.md
+  - 算法:
+      - algorithm/index.md
+  - 技术:
+      - technology/index.md
+  - csdiy:
+      - csdiy/index.md
+plugins:
+  - search
+  - tags
+  - projects
+  
+
